@@ -1,5 +1,5 @@
 // Inicializa EmailJS
-emailjs.init("Mij2hxi74IOrpJ8KQ"); // Public Key
+emailjs.init("Mij2hxi74IOrpJ8KQ");
 
 // Formulario Datos Personales
 const datosForm = document.getElementById('datosForm');
@@ -17,13 +17,13 @@ if(datosForm){
       birthDate: document.getElementById('birthDate').value,
       email: document.getElementById('email').value
     })
-    .then(() => {
-      document.getElementById('status-message').innerText = "¡Datos enviados con éxito!";
-      datosForm.reset();
+    .then(()=>{ 
+      document.getElementById('status-message').innerText="¡Datos enviados con éxito!";
+      e.target.reset();
     })
-    .catch(err => {
+    .catch(err=>{
       console.error(err);
-      document.getElementById('status-message').innerText = "Error al enviar los datos.";
+      document.getElementById('status-message').innerText="Error al enviar los datos";
     });
   });
 }
@@ -40,13 +40,13 @@ if(encuestaForm){
       work: document.getElementById('work').value,
       others: document.getElementById('others').value
     })
-    .then(() => {
-      document.getElementById('status-message-encuesta').innerText = "¡Encuesta enviada con éxito!";
-      encuestaForm.reset();
+    .then(()=>{ 
+      document.getElementById('status-message-encuesta').innerText="¡Encuesta enviada con éxito!";
+      e.target.reset();
     })
-    .catch(err => {
+    .catch(err=>{
       console.error(err);
-      document.getElementById('status-message-encuesta').innerText = "Error al enviar la encuesta.";
+      document.getElementById('status-message-encuesta').innerText="Error al enviar la encuesta";
     });
   });
 }
