@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encuesta</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Formulario de Encuesta</h1>
     <form id="encuestaForm">
       <label>Gustos Musicales:</label>
-      <input type="text" placeholder="Ej: Rock, Pop..." required>
+      <input type="text" id="music" placeholder="Ej: Rock, Pop..." required>
       
       <label>Gustos Deportivos:</label>
-      <input type="text" placeholder="Ej: Fútbol, Natación..." required>
+      <input type="text" id="sports" placeholder="Ej: Fútbol, Natación..." required>
 
       <label>Estudios:</label>
-      <input type="text" placeholder="Ej: Secundario, Universidad..." required>
+      <input type="text" id="studies" placeholder="Ej: Secundario, Universidad..." required>
 
       <label>Laborales:</label>
-      <input type="text" placeholder="Ej: Empleado, Freelance..." required>
+      <input type="text" id="work" placeholder="Ej: Empleado, Freelance..." required>
 
       <label>Otros:</label>
-      <textarea placeholder="Otros comentarios..."></textarea>
+      <textarea id="others" placeholder="Otros comentarios..."></textarea>
 
       <button type="submit">Enviar Encuesta</button>
     </form>
@@ -33,7 +34,10 @@
       <a href="datos.html" class="btn">Ir a Datos Personales</a>
     </div>
 
+    <p id="status-message-encuesta"></p>
     <img src="https://images.pexels.com/photos/3184309/pexels-photo-3184309.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Encuesta Imagen" class="form-img">
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
