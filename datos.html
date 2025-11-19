@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Personales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formulario de Datos Personales</h1>
+    <form id="datosForm">
+      <input type="text" placeholder="C.I" required>
+      <input type="text" placeholder="Nombre" required>
+      <input type="text" placeholder="Apellido" required>
+      <input type="text" placeholder="Dirección" required>
+      <select required>
+        <option value="">Sexo</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+      </select>
+      <input type="text" placeholder="Ciudad" required>
+      <input type="tel" placeholder="Teléfono" required>
+      <input type="date" placeholder="Fecha de Nacimiento" required>
+      <input type="email" placeholder="Correo" required>
+      <button type="submit">Enviar Datos</button>
+    </form>
+
+    <div class="buttons">
+      <a href="index.html" class="btn">Inicio</a>
+      <a href="encuesta.html" class="btn">Ir a Encuesta</a>
+    </div>
+
+    <p id="status-message"></p>
+    <img src="https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Formulario Imagen" class="form-img">
+  </div>
+</body>
+</html>
