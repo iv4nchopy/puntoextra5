@@ -39,7 +39,7 @@ if (encuestaForm) {
   encuestaForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.send("service_a3697qc", "template_z6xjm5i", {
+    emailjs.send("emailjs.send("service_a3697qc","template_q33r6qn");", {
       music: document.getElementById('music').value,
       sports: document.getElementById('sports').value,
       studies: document.getElementById('studies').value,
