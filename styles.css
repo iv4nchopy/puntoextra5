@@ -1,7 +1,5 @@
-/* RESET */
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
 
-/* BODY */
 body {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   min-height: 100vh;
@@ -11,7 +9,6 @@ body {
   color: #fff;
 }
 
-/* CONTAINER */
 .container {
   background: rgba(255,255,255,0.1);
   padding: 30px;
@@ -25,12 +22,7 @@ body {
 
 h1 { margin-bottom: 15px; font-size: 2em; }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-}
+form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
 
 input, select, textarea, button {
   padding: 10px 12px;
@@ -51,12 +43,7 @@ button {
 
 button:hover { background: #ff4e9b; }
 
-.buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
+.buttons { display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; }
 
 .btn {
   padding: 10px 20px;
