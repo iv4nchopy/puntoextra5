@@ -1,12 +1,11 @@
 // Inicializa EmailJS
-emailjs.init("Mij2hxi74IOrpJ8KQ"); // Tu Public Key
+emailjs.init("Mij2hxi74IOrpJ8KQ"); // Public Key
 
-// Formulario de Datos Personales
+// Formulario Datos Personales
 const datosForm = document.getElementById('datosForm');
 if(datosForm){
-  datosForm.addEventListener('submit', function(event){
-    event.preventDefault();
-
+  datosForm.addEventListener('submit', function(e){
+    e.preventDefault();
     emailjs.send("service_a3697qc", "template_z6xjm5i", {
       ci: document.getElementById('ci').value,
       firstName: document.getElementById('firstName').value,
@@ -22,19 +21,18 @@ if(datosForm){
       document.getElementById('status-message').innerText = "¡Datos enviados con éxito!";
       datosForm.reset();
     })
-    .catch((error) => {
-      console.error(error);
+    .catch(err => {
+      console.error(err);
       document.getElementById('status-message').innerText = "Error al enviar los datos.";
     });
   });
 }
 
-// Formulario de Encuesta
+// Formulario Encuesta
 const encuestaForm = document.getElementById('encuestaForm');
 if(encuestaForm){
-  encuestaForm.addEventListener('submit', function(event){
-    event.preventDefault();
-
+  encuestaForm.addEventListener('submit', function(e){
+    e.preventDefault();
     emailjs.send("service_a3697qc", "template_z6xjm5i", {
       music: document.getElementById('music').value,
       sports: document.getElementById('sports').value,
@@ -46,8 +44,8 @@ if(encuestaForm){
       document.getElementById('status-message-encuesta').innerText = "¡Encuesta enviada con éxito!";
       encuestaForm.reset();
     })
-    .catch((error) => {
-      console.error(error);
+    .catch(err => {
+      console.error(err);
       document.getElementById('status-message-encuesta').innerText = "Error al enviar la encuesta.";
     });
   });
