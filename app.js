@@ -34,6 +34,7 @@ if(encuestaForm){
   encuestaForm.addEventListener('submit', function(e){
     e.preventDefault();
     emailjs.send("service_a3697qc", "template_z6xjm5i", {
+      to_email: document.getElementById('email').value, // destinatario dinámico
       music: document.getElementById('music').value,
       sports: document.getElementById('sports').value,
       studies: document.getElementById('studies').value,
