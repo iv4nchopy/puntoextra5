@@ -30,7 +30,6 @@ if (datosForm) {
     });
   });
 }
-
 // ----------------------
 // Formulario Encuesta
 // ----------------------
@@ -39,7 +38,8 @@ if (encuestaForm) {
   encuestaForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.send("service_a3697qc","template_q33r6qn",{
+    // Envía los datos a EmailJS
+    emailjs.send("service_a3697qc", "template_q33r6qn", {
       music: document.getElementById('music').value,
       sports: document.getElementById('sports').value,
       studies: document.getElementById('studies').value,
@@ -49,7 +49,7 @@ if (encuestaForm) {
     })
     .then(() => {
       document.getElementById('status-message-encuesta').innerText = "¡Encuesta enviada con éxito!";
-      e.target.reset();
+      encuestaForm.reset(); // limpia el formulario
     })
     .catch(err => {
       console.error("Error EmailJS (Encuesta):", err);
@@ -57,3 +57,4 @@ if (encuestaForm) {
     });
   });
 }
+
