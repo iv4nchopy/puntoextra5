@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datos Personales</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Formulario de Datos Personales</h1>
     <form id="datosForm">
-      <input type="text" placeholder="C.I" required>
-      <input type="text" placeholder="Nombre" required>
-      <input type="text" placeholder="Apellido" required>
-      <input type="text" placeholder="Dirección" required>
-      <select required>
+      <input type="text" id="ci" placeholder="C.I" required>
+      <input type="text" id="firstName" placeholder="Nombre" required>
+      <input type="text" id="lastName" placeholder="Apellido" required>
+      <input type="text" id="address" placeholder="Dirección" required>
+      <select id="sex" required>
         <option value="">Sexo</option>
         <option value="Masculino">Masculino</option>
         <option value="Femenino">Femenino</option>
         <option value="Otro">Otro</option>
       </select>
-      <input type="text" placeholder="Ciudad" required>
-      <input type="tel" placeholder="Teléfono" required>
-      <input type="date" placeholder="Fecha de Nacimiento" required>
-      <input type="email" placeholder="Correo" required>
+      <input type="text" id="city" placeholder="Ciudad" required>
+      <input type="tel" id="phone" placeholder="Teléfono" required>
+      <input type="date" id="birthDate" placeholder="Fecha de Nacimiento" required>
+      <input type="email" id="email" placeholder="Correo" required>
       <button type="submit">Enviar Datos</button>
     </form>
 
@@ -35,5 +36,7 @@
     <p id="status-message"></p>
     <img src="https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Formulario Imagen" class="form-img">
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
