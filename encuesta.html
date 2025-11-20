@@ -10,6 +10,8 @@
 <body>
   <div class="container">
     <h1>Formulario de Encuesta</h1>
+
+    <!-- Formulario de encuesta -->
     <form id="encuestaForm">
       <input type="text" id="music" placeholder="Gustos Musicales" required>
       <input type="text" id="sports" placeholder="Gustos Deportivos" required>
@@ -20,15 +22,48 @@
       <button type="submit">Enviar Encuesta</button>
     </form>
 
+    <!-- Botones de navegación -->
     <div class="buttons">
       <a href="index.html" class="btn">Inicio</a>
       <a href="datos.html" class="btn">Ir a Datos Personales</a>
     </div>
 
+    <!-- Mensaje de estado -->
     <p id="status-message-encuesta"></p>
+
+    <!-- Imagen decorativa -->
     <img src="https://images.pexels.com/photos/3184309/pexels-photo-3184309.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Encuesta Imagen" class="form-img">
   </div>
 
-  <script src="app.js"></script>
+  <!-- JS funcional con EmailJS -->
+  <script>
+    // Inicializa EmailJS
+    emailjs.init("Mij2hxi74IOrpJ8Q");
+
+    // Formulario Encuesta
+    const encuestaForm = document.getElementById('encuestaForm');
+    if (encuestaForm) {
+      encuestaForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.send("service_a3697qc", "template_q33r6qn", {
+          music: document.getElementById('music').value,
+          sports: document.getElementById('sports').value,
+          studies: document.getElementById('studies').value,
+          work: document.getElementById('work').value,
+          others: document.getElementById('others').value,
+          userEmail: document.getElementById('email').value // solo para mostrar en el correo
+        })
+        .then(() => {
+          document.getElementById('status-message-encuesta').innerText = "¡Encuesta enviada con éxito!";
+          encuestaForm.reset();
+        })
+        .catch(err => {
+          console.error("Error EmailJS (Encuesta):", err);
+          document.getElementById('status-message-encuesta').innerText = "Error al enviar la encuesta";
+        });
+      });
+    }
+  </script>
 </body>
 </html>
